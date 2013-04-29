@@ -13,7 +13,7 @@ end
 
 -- ------ member configuration ------ --
 
-m20 = Map("mwan3", translate("MWAN3 Multi-WAN member configuration"))
+m20 = Map("mwan3", translate("MWAN3 Multi-WAN member configuration - ") .. arg[1])
 
 	m20.redirect = dsp.build_url("admin", "network", "mwan3", "member")
 

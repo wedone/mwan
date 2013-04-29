@@ -4,7 +4,7 @@ arg[1] = arg[1] or ""
 
 -- ------ interface configuration ------ --
 
-m30 = Map("mwan3", translate("MWAN3 Multi-WAN interface configuration"))
+m30 = Map("mwan3", translate("MWAN3 Multi-WAN interface configuration - ") .. arg[1])
 
 	m30.redirect = dsp.build_url("admin", "network", "mwan3", "interface")
 

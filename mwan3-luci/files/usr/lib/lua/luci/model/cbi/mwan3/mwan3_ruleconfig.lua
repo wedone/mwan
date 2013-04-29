@@ -13,7 +13,7 @@ end
 
 -- ------ rule configuration ------ --
 
-m5 = Map("mwan3", translate("MWAN3 Multi-WAN rule configuration"))
+m5 = Map("mwan3", translate("MWAN3 Multi-WAN rule configuration - ") .. arg[1])
 
 	m5.redirect = dsp.build_url("admin", "network", "mwan3", "rule")
 

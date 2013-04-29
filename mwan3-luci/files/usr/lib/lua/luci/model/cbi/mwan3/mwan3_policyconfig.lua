@@ -13,7 +13,7 @@ end
 
 -- ------ policy configuration ------ --
 
-m10 = Map("mwan3", translate("MWAN3 Multi-WAN policy configuration"))
+m10 = Map("mwan3", translate("MWAN3 Multi-WAN policy configuration - ") .. arg[1])
 
 	m10.redirect = dsp.build_url("admin", "network", "mwan3", "policy")
 
