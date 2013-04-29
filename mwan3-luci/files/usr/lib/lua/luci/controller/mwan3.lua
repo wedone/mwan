@@ -56,11 +56,11 @@ function mwan_get_iface()
 		function (section)
 			rulenum = rulenum+1
 			local enabled = luci.sys.exec("uci get -p /var/state mwan3." .. section[".name"] .. ".enabled")
-			local tracked = luci.sys.exec("uci get -p /var/state mwan3." .. section[".name"] .. ".track_ip")
-				tracked = string.len(tracked)
-			local status = mwan_get_status(rulenum)
 			if enabled == "1\n" then
+				local tracked = luci.sys.exec("uci get -p /var/state mwan3." .. section[".name"] .. ".track_ip")
+					tracked = string.len(tracked)
 				if tracked > 0 then
+					local status = mwan_get_status(rulenum)
 					str = str .. section[".name"] .. "[" .. status .. "]"
 				else
 					str = str .. section[".name"] .. "[" .. "nm" .. "]"
